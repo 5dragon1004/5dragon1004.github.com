@@ -6,42 +6,22 @@
   <body>
 <div id="fb-root"></div>
 <script>
-  window.fbAsyncInit = function() {
-    FB.init({appId: '192539370795725', status: true, cookie: true,
-             xfbml: true});
-  };
-  (function() {
-    var e = document.createElement('script'); e.async = true;
-    e.src = document.location.protocol +
-      '//connect.facebook.net/en_US/all.js';
-    document.getElementById('fb-root').appendChild(e);
-  }());
-  
-  window.fbAsyncInit = function() {
-  FB.init({appId: '192539370795725', status: true, cookie: true, xfbml: true});
-      /* All the events registered */
-     FB.Event.subscribe('auth.login', function(response) {
-         // do something with response
-         login();
-     });
-     FB.Event.subscribe('auth.logout', function(response) {
-         // do something with response
-         logout();
-     });
- 
-         // Login , Authorize , Permissions check
-     FB.getLoginStatus(function(response) {
-         if (response.session) {
-             // 이미 내 앱을 설치한 user가 할 동작
-          // location.href = "http://apps.facebook.com/andyappinfo/";
-         }else{
-           // 내앱을 설치하지 않은사람이 할 동작
-           // Browser Entire Redirection to Request permission Page.
-           top.location.href = "http://www.facebook.com/dialog/oauth?client_id=192539370795725&redirect_uri=andyappinfo&scope=user_likes,publish_stream";
-    }
-     });
- };
- 
-</script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '379156532184851', 
+                status: true, 
+                cookie: true, 
+                xfbml: true  
+            });
+        };
+        (function (d) {
+            var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0]; 
+            if (d.getElementById(id)) { return; }
+            js = d.createElement('script'); js.id = id; js.async = true;
+            js.src = "//connect.facebook.net/ko_KR/all.js";
+            ref.parentNode.insertBefore(js, ref);
+        } (document));
+ </script>
+ <br>1234
   </body>
 </html>
